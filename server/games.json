@@ -2,25 +2,25 @@
     {
         "id": 1,
         "name": "Ripple",
-        "number of players": "2 to 6",
-        "needed-to-play": "Skip-Bo cards",
-        "how-to-play": "Deal 10 cards to each player. After each player has 10 cards the dealer flips over the next card and placed it face up in-front of their to start their discard pile. Each player lays out their 10 cards in 2 horizontal rows of 5, then flips over 3 cards (you can't flip over 2 that are directly above and below oneanother). Each play on their turn can either draw from the deck or from another players discard pile, and can either replace the new card with one in front of them, or just discard it.Matching cards vertically will make both cards worth 0 points, otherwise they will be face value. 7's 11's and Skip-Bo cards are always worth 0. If a player picks up a card that matches a face-up card in front of them and the card they flip over matches another card face-up they can ripple that card rather then discard it (the card to be replaced must be face down in order to do this). Getting 2 sets of the same card next to eachother will make those cards equal to -20. After the one player flips all of their cards, all the other players get one more turn before the round ends. ",
-        "how-to-win": "First person to -100 points"
+        "numberOfPlayers": "2 to 6",
+        "neededToPlay": "Skip-Bo cards",
+        "howToPlay": "Deal 10 cards to each player. After each player has 10 cards the dealer flips over the next card and placed it face up in-front of their to start their discard pile. Each player lays out their 10 cards in 2 horizontal rows of 5, then flips over 3 cards (you can't flip over 2 that are directly above and below oneanother). Each play on their turn can either draw from the deck or from another players discard pile, and can either replace the new card with one in front of them, or just discard it.Matching cards vertically will make both cards worth 0 points, otherwise they will be face value. 7's 11's and Skip-Bo cards are always worth 0. If a player picks up a card that matches a face-up card in front of them and the card they flip over matches another card face-up they can ripple that card rather then discard it (the card to be replaced must be face down in order to do this). Getting 2 sets of the same card next to eachother will make those cards equal to -20. After the one player flips all of their cards, all the other players get one more turn before the round ends. ",
+        "howToWin": "First person to -100 points"
     },
     {
         "id": 2,
         "name": "War",
-        "number of players": "2",
-        "needed-to-play": "Deck of cards",
-        "how-to-play": "Deal all cards between the two players (Do not look at your cards). Each player will flip over the top card in their hand. The player with the high card takes both cards. If the cards have the same value, this means war. Both players will place 3 cards face down in front of themselves and flip over the 4th, the player with the high card takes all the cards. If the cards are the same repeat till someone has a high card.",
-        "how-to-win": "One player has all the cards"
+        "numberOfPlayers": "2",
+        "neededToPlay": "Deck of cards",
+        "howToPlay": "Deal all cards between the two players (Do not look at your cards). Each player will flip over the top card in their hand. The player with the high card takes both cards. If the cards have the same value, this means war. Both players will place 3 cards face down in front of themselves and flip over the 4th, the player with the high card takes all the cards. If the cards are the same repeat till someone has a high card.",
+        "howToWin": "One player has all the cards"
     },
     {
         "id": 3,
         "name": "Hearts",
-        "number of players": "3 to 5",
-        "needed-to-play": "Deck of cards",
-        "how-to-play": "Deal all cards. If 4 players each will have 13 cards, if 3 players take out the 2 of diamonds so each player will have 17 cards, if 5 players take out 2 of diamonds & spades. The player with the 2 of clubs starts the game. Each player going clockwise will play one card of the suit as the card that led the hand, high card in that suit takes the cards and starts the next round. If a player does not have the suit that was led he/she can play another suit (the queen of spades or a heart can not be played on the first hand). Each heart you have collected at the end of the round is 1 point and the queen of spades is worth 13 for a total of 26 points. If a player collects all 13 hearts and the queen of spades in one round that player recieves 0 points for the round and every other player recieves 26 points",
-        "how-to-win": "The Player with the least number of points when another player has 100 or more points wins"
+        "numberOfPlayers": "3 to 5",
+        "neededToPlay": "Deck of cards",
+        "howToPlay": "Deal all cards. If 4 players each will have 13 cards, if 3 players take out the 2 of diamonds so each player will have 17 cards, if 5 players take out 2 of diamonds & spades. The player with the 2 of clubs starts the game. Each player going clockwise will play one card of the suit as the card that led the hand, high card in that suit takes the cards and starts the next round. If a player does not have the suit that was led he/she can play another suit (the queen of spades or a heart can not be played on the first hand). Each heart you have collected at the end of the round is 1 point and the queen of spades is worth 13 for a total of 26 points. If a player collects all 13 hearts and the queen of spades in one round that player recieves 0 points for the round and every other player recieves 26 points",
+        "howToWin": "The Player with the least number of points when another player has 100 or more points wins"
     }
 ]
