@@ -18,8 +18,8 @@ class MyGamesList extends Component {
         this.setState({nameInput: event.target.value});
         this.setState({numberOfPlayersInput: event.target.value});
         this.setState({neededToPlayInput: event.target.value});
-        this.setState({howToPlayInput: event.target.value});
-        this.setState({howToWinInput: event.target.value});
+        // this.setState({howToPlayInput: event.target.value});
+        // this.setState({howToWinInput: event.target.value});
     };
 
     toggleEdit =() => {
@@ -34,11 +34,17 @@ class MyGamesList extends Component {
                 className='deleteButton'
                 onClick={(e) => {
                     this.props.deleteGame(this.props.index)
-                }}
-                >
+                    }}>
                     {'X'}
                 </p>
             <h2>{games.name}</h2>
+
+            {this.state.toggleEdit} ? (
+                <input
+                value={this.state.nameInput}
+                onChange={this.handleChange}/>
+            ) : ()
+            )
             </li>
         )
     }
