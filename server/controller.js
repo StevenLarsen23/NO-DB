@@ -1,6 +1,6 @@
-const allGames = require('./games.json');
+const games = require('./games.json');
 let myGames = [];
-let id = allGames[allGames.length -1].id +1;
+let id = games[games.length -1].id +1;
 
 module.exports = {
     getGames: (req, res) => {
@@ -8,15 +8,15 @@ module.exports = {
         const gamesArr = [];
 
         if (search) {
-            let filteredGames = allGames.filter((games) => games.name.toLowerCase().includes(search.toLowerCase())
+            let filteredGames = games.filter((games) => games.name.toLowerCase().includes(search.toLowerCase())
             );
-            for (let i = 0; i < allGames.length; i++)
+            for (let i = 0; i < games.length; i++)
             if (filteredGames[i]) {
                 gamesArr.push(filteredGames[i]);
             }
         } else { 
-            for (let i = 0; i < allGames.length; i++)
-            gamesArr.push(allGames[i]);
+            for (let i = 0; i < games.length; i++)
+            gamesArr.push(games[i]);
         }
         return res.status(200).send(gamesArr);
     }, 
@@ -33,13 +33,13 @@ module.exports = {
             howToPlay,
             howToWin,
         }
-        allGames.push(game);
+        games.push(game);
         id++;
-        res.status(200).send(allGames)
+        res.status(200).send(games)
     },
     addToMyGames: (req, res) => {
         const {id} = req.params;
-        const foundGame = {...allGames.find((games) => games.id === +id) };
+        const foundGame = {...games.find((games) => games.id === +id) };
 
         myGames.push(foundGame);
         

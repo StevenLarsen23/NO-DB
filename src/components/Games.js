@@ -32,12 +32,16 @@ class Games extends Component {
 
   render() {
     let mappedGames = [];
-    mappedGames = this.state.displayGames.map((games) => {
-      <GameList key={games.id} games={games} addGame={this.props.addGame} />;
+    mappedGames = this.state.showGames.map((games) => {
+      <GameList 
+      key={games.id} 
+      games={games} 
+      addGame={this.props.addGame} 
+      />;
     });
+    console.log(mappedGames)
     return (
       <div>
-        <input value={this.state.searchInput} onChange={this.handleInput} />
         <ul className="game-list">{mappedGames}</ul>
       </div>
     );
