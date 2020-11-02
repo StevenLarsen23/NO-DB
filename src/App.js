@@ -59,14 +59,14 @@ class App extends Component {
     <div className="App">
       <Header/>
       <main className='games'>
-        <div>
+        <div className='left'>
         <p className='list-title'>My Games</p>
         <MyGames
         myGames={this.state.myGames}
         deleteGame={this.deleteGame}
         editNumberOfPlayers={this.editNumberOfPlayers}/>
         </div>
-        <div>
+        <div className='right'>
         <p className='list-title'>All Games</p>
         <Games addToMyGames={this.addToMyGames}/>
         </div>

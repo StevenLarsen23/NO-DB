@@ -80,3 +80,11 @@ body {
 .edit-button {
     width: 50px;
 }
+
+.left,
+.right {
+    overflow: auto;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
