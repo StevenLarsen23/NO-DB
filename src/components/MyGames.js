@@ -11,6 +11,7 @@ const MyGames = (props) => {
         index={index}
         />
     });
+    console.log(gamesArr)
     return <ul className='my-games-list'>{gamesArr}</ul>;
 };
 

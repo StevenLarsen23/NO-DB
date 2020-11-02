@@ -13,7 +13,9 @@ class Games extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/games").then((res) => {
+    axios
+    .get("/api/games")
+    .then((res) => {
       this.setState({
         showGames: res.data,
       });
@@ -42,7 +44,7 @@ class Games extends Component {
     console.log(mappedGames)
     return (
       <div>
-        <ul className="game-list">{mappedGames}</ul>
+        <ul className="games-list">{mappedGames}</ul>
       </div>
     );
   }

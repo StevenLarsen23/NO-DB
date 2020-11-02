@@ -2,6 +2,7 @@ body {
     background-image: url("https://bookmans.com/wp-content/uploads/Northwest-Board-Games-1200x628.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -27,4 +28,23 @@ body {
     height: 2vh;
     width: 20vw;
     margin: 20px;
+}
+
+.games {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.games-list {
+    display: flex;
+    height: 100vh;
+    width: 50vw;
+
+}
+
+.my-games-list {
+    display: flex;
+    height: 100vh;
+    width: 50vw;
 }

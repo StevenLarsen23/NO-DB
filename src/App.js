@@ -37,7 +37,7 @@ class App extends Component {
 
   deleteGame(index) {
     axios
-    .delete(`/api/games/:${index}`)
+    .delete(`/api/myGames/:${index}`)
     .then((res) => {
       this.setState({myGames: res.data})
     })
@@ -75,7 +75,7 @@ class App extends Component {
   return (
     <div className="App">
       <Header/>
-      <main>
+      <main className='games'>
         <MyGames
         myGames={this.state.myGames}
         deleteGame={this.deleteGame}

@@ -49,11 +49,16 @@ module.exports = {
         let index = myGames.findIndex(e => e.id === +req.params.id);
         myGames[index] = {
             id: myGames[index].id,
-            name: req.body.name || myGames[index].name,
-            numberOfPlayers: req.body.numberOfPlayers || myGames[index].numberOfPlayers,
-            neededToPlay: req.body.neededToPlay || myGames[index].neededToPlay,
-            howToPlay: req.body.howToPlay || myGames[index].howToPlay,
-            howToWin: req.body.howToWin || myGames[index].howToWin,
+            name: 
+            req.body.name || myGames[index].name,
+            numberOfPlayers: 
+            req.body.numberOfPlayers || myGames[index].numberOfPlayers,
+            neededToPlay: 
+            req.body.neededToPlay || myGames[index].neededToPlay,
+            howToPlay: 
+            req.body.howToPlay || myGames[index].howToPlay,
+            howToWin: 
+            req.body.howToWin || myGames[index].howToWin,
         }
 
         res.status(200).send(myGames)
