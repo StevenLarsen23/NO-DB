@@ -34,14 +34,13 @@ class Games extends Component {
 
   render() {
     let mappedGames = [];
-    mappedGames = this.state.showGames.map((games) => {
+    mappedGames = this.state.showGames.map((games) => (
       <GameList 
       key={games.id} 
       games={games} 
-      addGame={this.props.addGame} 
-      />;
-    });
-    console.log(mappedGames)
+      addToMyGames={this.props.addToMyGames} 
+      />
+    ));
     return (
       <div>
         <ul className="games-list">{mappedGames}</ul>

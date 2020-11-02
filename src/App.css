@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://bookmans.com/wp-content/uploads/Northwest-Board-Games-1200x628.png");
+    background-image: url("https://www.avenuecalgary.com/wp-content/uploads/2020/05/small-dice-by-Soniacri-960x538.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -30,21 +30,52 @@ body {
     margin: 20px;
 }
 
+.list-title {
+    font-size: 50px;
+}
+
 .games {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
+    color: white;
+    text-shadow: 2px 2px black;
 }
 
 .games-list {
     display: flex;
-    height: 100vh;
-    width: 50vw;
+    flex-direction: column;
+    /* height: 100vh; */
+    width: 95vw;
+    padding: 20px;
+    margin: 0;
+}
 
+.games-list h1 {
+    color: mediumseagreen;
+    text-decoration: underline;
+    margin: 5px;
+}
+
+.games-list h3 {
+    margin: 5px;
+}
+
+.games-list p {
+    margin: 5px;
+}
+
+.games-list strong {
+    color: lightgreen;
 }
 
 .my-games-list {
     display: flex;
     height: 100vh;
     width: 50vw;
+}
+
+.edit-button {
+    width: 50px;
 }

@@ -13,7 +13,8 @@ class App extends Component {
     this.state = {
       myGames: []
     };
-    this.addGame = this.addGame.bind(this);
+    this.addToMyGames = this.addToMyGames.bind(this);
+    this.deleteGame = this.deleteGame.bind(this)
   }
   
 
@@ -26,45 +27,27 @@ class App extends Component {
   };
 
 
-  addGame(id) {
+  addToMyGames(id) {
     axios
-    .post(`/api/games/:${id}`)
+    .post(`/api/myGames/${id}`)
     .then((res) => {
       this.setState({myGames: res.data})
     })
     .catch((err) => console.log(err))
   };
 
-  deleteGame(index) {
+  deleteGame(id) {
     axios
-    .delete(`/api/myGames/:${index}`)
+    .delete(`/api/myGames/${id}`)
     .then((res) => {
       this.setState({myGames: res.data})
     })
     .catch((err) => console.log(err))
   };
 
-  editName = (index, name) => {
-    axios
-    .put(`/api/myGames/${index}`, {name})
-    .then((res) => {
-      this.setState({myGames: res.data});
-    })
-    .catch((err) => console.log(err))
-  };
-
-  editNumberOfPlayers = (index, numberOfPlayers) => {
-    axios
-    .put(`/api/myGames/${index}`, {numberOfPlayers})
-    .then((res) => {
-      this.setState({myGames: res.data});
-    })
-    .catch((err) => console.log(err))
-  };
-
-  editNeededToPlay = (index, neededToPlay) => {
-    axios
-    .put(`/api/myGames/${index}`, {neededToPlay})
+  editNumberOfPlayers = (id, numberOfPlayers) => {
+    axios 
+    .put(`/api/myGames/${id}`, {numberOfPlayers})
     .then((res) => {
       this.setState({myGames: res.data});
     })
@@ -76,13 +59,17 @@ class App extends Component {
     <div className="App">
       <Header/>
       <main className='games'>
+        <div>
+        <p className='list-title'>My Games</p>
         <MyGames
         myGames={this.state.myGames}
         deleteGame={this.deleteGame}
-        editName={this.editName}
-        editNumberOfPlayers={this.editNumberOfPlayers}
-        editNeededToPlay={this.editNeededToPlay}/>
-        <Games/>
+        editNumberOfPlayers={this.editNumberOfPlayers}/>
+        </div>
+        <div>
+        <p className='list-title'>All Games</p>
+        <Games addToMyGames={this.addToMyGames}/>
+        </div>
       </main>
     </div>
   );

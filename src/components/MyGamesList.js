@@ -5,21 +5,13 @@ class MyGamesList extends Component {
     super(props);
 
     this.state = {
-      nameInput: props.games.name,
       numberOfPlayersInput: props.games.numberOfPlayers,
-      neededToPlayInput: props.games.neededToPlay,
-      // howToPlayInput: props.games.howToPlay,
-      // howToWinInput: props.games.howToWin,
       toggleEdit: false,
     };
   }
 
   handleChange = (event) => {
-    this.setState({ nameInput: event.target.value });
     this.setState({ numberOfPlayersInput: event.target.value });
-    this.setState({ neededToPlayInput: event.target.value });
-    // this.setState({howToPlayInput: event.target.value});
-    // this.setState({howToWinInput: event.target.value});
   };
 
   toggleEdit = () => {
@@ -28,62 +20,42 @@ class MyGamesList extends Component {
 
   render() {
     let { games } = this.props;
+    console.log(games)
     return (
-      <li className="games">
+      <li className="games-list">
         <p
-          className="deleteButton"
+          className="delete-button"
           onClick={(e) => {
-            this.props.deleteGame(this.props.index);
+            e.stopPropagation();
+            this.props.deleteGame(games.id);
           }}
         >
           {"X"}
         </p>
-        <h2>{games.name}</h2>
+        <h1>{games.name}</h1>
         {this.state.toggleEdit ? (
-          <input value={this.state.nameInput} onChange={this.handleChange} />
+          <input 
+          value={this.state.numberOfPlayersInput} 
+          onChange={this.handleChange} />
         ) : (
-          <h3>Name: {games.name}</h3>
-        )}
-        {this.state.toggleEdit ? (
-          <input
-            value={this.state.numberOfPlayersInput}
-            onChange={this.handleChange}
-          />
-        ) : (
-          <h3>Number of Players: {games.numberOfPlayers}</h3>
-        )}
-        {this.state.toggleEdit ? (
-          <input
-            value={this.state.neededToPlayInput}
-            onChange={this.handleChange}
-          />
-        ) : (
-          <h3>Name: {games.name}</h3>
+        <h3><strong>Number of players:</strong> {games.numberOfPlayers}</h3>
         )}
         {this.state.toggleEdit ? (
           <div>
             <button
               onClick={() => {
-                this.props.editName(this.props.index, this.state.nameInput);
-                this.props.editNumberOfPlayers(
-                  this.props.index,
-                  this.state.numberOfPlayersInput
-                );
-                this.props.editNeededToPlay(
-                  this.props.index,
-                  this.state.neededToPlayInput
-                );
+                this.props.editGame(
+                    this.props.games.id, 
+                    this.state.numberOfPlayersInput
+                    );
+                this.toggleEdit();
               }}
             >
               Save
             </button>
             <button
               onClick={() => {
-                this.setState({
-                  nameInput: games.name,
-                  numberOfPlayersInput: games.numberOfPlayers,
-                  neededToPlayInput: games.neededToPlay,
-                });
+                this.setState({ numberOfPlayersInput: games.numberOfPlayers });
                 this.toggleEdit();
               }}
             >
@@ -91,7 +63,13 @@ class MyGamesList extends Component {
             </button>
           </div>
         ) : null}
-        <button onClick={this.toggleEdit}>Edit</button>)
+
+        <h3><strong>Needed to play:</strong> {games.neededToPlay}</h3>
+      <p><strong>How to play:</strong> <br/>{games.howToPlay}</p>
+      <p><strong>How to win:</strong> <br/>{games.howToWin}</p>
+        <button className="edit-button" onClick={this.toggleEdit}>
+          Edit
+        </button>
       </li>
     );
   }

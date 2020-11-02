@@ -2,17 +2,16 @@ import React from 'react';
 import MyGamesList from './MyGamesList';
 
 const MyGames = (props) => {
-    let gamesArr = props.myGames.map((games, index) => {
+    let gamesArr = props.myGames.map((games, index) => (
         <MyGamesList
         key={`${games.id}-${index}`}
         games={games}
         deleteGame={props.deleteGame}
-        editGame={props.editGame}
+        editGame={props.editNumberOfPlayers}
         index={index}
         />
-    });
-    console.log(gamesArr)
-    return <ul className='my-games-list'>{gamesArr}</ul>;
+    ));
+    return <ul className='games-list'>{gamesArr}</ul>;
 };
 
 export default MyGames;
