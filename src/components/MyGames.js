@@ -11,7 +11,7 @@ const MyGames = (props) => {
         index={index}
         />
     ));
-    return <ul className='games-list'>{gamesArr}</ul>;
+    return <ul className='my-games-list'>{gamesArr}</ul>;
 };
 
 export default MyGames;

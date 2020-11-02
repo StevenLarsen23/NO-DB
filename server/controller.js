@@ -54,6 +54,7 @@ module.exports = {
   editGame: (req, res) => {
     let index = myGames.findIndex((e) => { 
        return e.id === +req.params.id
+    //    console.log(e.id, +req.params.id)
     });
     myGames[index] = {
       id: myGames[index].id,

@@ -20,14 +20,13 @@ class MyGamesList extends Component {
 
   render() {
     let { games } = this.props;
-    console.log(games)
     return (
       <li className="games-list">
         <p
           className="delete-button"
           onClick={(e) => {
             e.stopPropagation();
-            this.props.deleteGame(games.id);
+            this.props.deleteGame(this.props.games.id);
           }}
         >
           {"X"}
