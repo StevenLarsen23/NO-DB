@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Games from './components/Games';
 import MyGames from './components/MyGames';
 import axios from 'axios';
+import routes from './routes';
+import {Links} from 'react-router-dom'
 
 
 class App extends Component {
@@ -45,9 +47,9 @@ class App extends Component {
     .catch((err) => console.log(err))
   };
 
-  editNumberOfPlayers = (id, numberOfPlayers) => {
+  editName = (id, name) => {
     axios 
-    .put(`/api/myGames/${id}`, {numberOfPlayers})
+    .put(`/api/myGames/${id}`, {name})
     .then((res) => {
       this.setState({myGames: res.data});
     })
@@ -63,8 +65,8 @@ class App extends Component {
         <p className='list-title'>My Games</p>
         <MyGames
         myGames={this.state.myGames}
-        deleteGame={this.deleteGame}
-        editNumberOfPlayers={this.editNumberOfPlayers}/>
+        deleteGame={this.delembteGame}
+        editName={this.editName}/>
         </div>
         <div className='right'>
         <p className='list-title'>All Games</p>

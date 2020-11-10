@@ -69,6 +69,7 @@ module.exports = {
   },
   deleteGame: (req, res) => {
     let index = myGames.findIndex((e) => { 
+      // console.log("Delete", e.id, +req.params.id)
         return e.id === +req.params.id
      });
     myGames.splice(index, 1);

@@ -7,6 +7,8 @@ body {
 }
 
 .Header {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,12 +34,15 @@ body {
 
 .list-title {
     font-size: 50px;
+    position: sticky;
+    top: 0;
+
 }
 
 .games {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     color: white;
     text-shadow: 2px 2px black;
@@ -68,17 +73,23 @@ body {
 
 .games-list strong {
     color: lightgreen;
+    width: 45vw;
 }
 
 .my-games-list {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 50vw;
+    width: 45vw;
 }
 
 .edit-button {
     width: 50px;
+}
+
+.delete-button {
+    color: red;
+    text-shadow: none;
 }
 
 .left,
@@ -87,4 +98,5 @@ body {
     height: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+
 }
