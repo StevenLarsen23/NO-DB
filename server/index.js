@@ -2,7 +2,7 @@ const express = require('express'),
 app = express(),
 cors = require('cors')
 ctrl = require('./controller.js'),
-port = 4423;
+port = 3000;
 
 app.use(express.json());
 app.use(cors())

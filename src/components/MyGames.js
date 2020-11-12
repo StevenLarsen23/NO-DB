@@ -3,7 +3,6 @@ import MyGamesList from './MyGamesList';
 
 const MyGames = (props) => {
     let gamesArr = props.myGames.map((games, index) => (
-        <div>
         <MyGamesList
         key={`${games.id}-${index}`}
         games={games}
@@ -11,7 +10,6 @@ const MyGames = (props) => {
         editGame={props.editName}
         index={index}
         />
-        </div>
     ));
     return <ul className='my-games-list'>{gamesArr}</ul>;
 };

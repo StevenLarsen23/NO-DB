@@ -4,8 +4,6 @@ import Header from './components/Header';
 import Games from './components/Games';
 import MyGames from './components/MyGames';
 import axios from 'axios';
-import routes from './routes';
-import {Links} from 'react-router-dom'
 
 
 class App extends Component {
